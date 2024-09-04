@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "708781784937",
+    "project_id": "parkmanagement-66f6f",
+    "storage_bucket": "parkmanagement-66f6f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708781784937:android:c61958dcbaad29b14607f8",
+        "android_client_info": {
+          "package_name": "com.example.park_management"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLullsHJZLOgT_WNo4L2p_C7ScPgz1jH0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
