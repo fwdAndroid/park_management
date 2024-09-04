@@ -1,8 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:park_management/screens/add/add_vehicle.dart';
+import 'package:park_management/screens/auth/auth_login.dart';
 import 'package:park_management/uitls/colors.dart';
 
 class HomePage extends StatefulWidget {
@@ -22,6 +24,19 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        actions: [
+          TextButton(
+              onPressed: () async {
+                await FirebaseAuth.instance.signOut().then((onValue) {
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (builder) => LoginScreen()));
+                });
+              },
+              child: Text("Logout"))
+        ],
+      ),
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
