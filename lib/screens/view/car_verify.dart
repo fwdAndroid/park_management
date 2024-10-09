@@ -35,7 +35,7 @@ class _CarVerfiyState extends State<CarVerfiy> {
         iconTheme: IconThemeData(color: black),
         centerTitle: true,
         title: Text(
-          "Mapa de Estacionamento",
+          "Visualize veículos registados",
           style: TextStyle(color: black),
         ),
       ),

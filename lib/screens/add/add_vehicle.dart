@@ -46,7 +46,7 @@ class _AddVehicleState extends State<AddVehicle> {
               child: Align(
                 alignment: AlignmentDirectional.topStart,
                 child: Text(
-                  'Foto do motorista',
+                  'Fotográfia Motorista',
                   style: GoogleFonts.plusJakartaSans(
                       color: black, fontWeight: FontWeight.w500, fontSize: 14),
                 ),
@@ -77,7 +77,7 @@ class _AddVehicleState extends State<AddVehicle> {
                   child: Align(
                     alignment: AlignmentDirectional.topStart,
                     child: Text(
-                      'Nome do driver',
+                      'Nome do Motorista',
                       style: GoogleFonts.plusJakartaSans(
                           color: black,
                           fontWeight: FontWeight.w500,
@@ -100,7 +100,7 @@ class _AddVehicleState extends State<AddVehicle> {
                             borderSide: BorderSide(color: borderColor)),
                         border: OutlineInputBorder(
                             borderSide: BorderSide(color: borderColor)),
-                        hintText: "Insira o nome completo",
+                        hintText: "Nome do Motorista",
                         hintStyle: GoogleFonts.plusJakartaSans(
                             color: black, fontSize: 12)),
                   ),
@@ -114,7 +114,7 @@ class _AddVehicleState extends State<AddVehicle> {
                   child: Align(
                     alignment: AlignmentDirectional.topStart,
                     child: Text(
-                      'Car Number',
+                      'Número de Matrícula',
                       style: GoogleFonts.plusJakartaSans(
                           color: black,
                           fontWeight: FontWeight.w500,
@@ -137,7 +137,7 @@ class _AddVehicleState extends State<AddVehicle> {
                             borderSide: BorderSide(color: borderColor)),
                         border: OutlineInputBorder(
                             borderSide: BorderSide(color: borderColor)),
-                        hintText: "Número do carro",
+                        hintText: "Número de Matrícula",
                         hintStyle: GoogleFonts.plusJakartaSans(
                             color: black, fontSize: 12)),
                   ),
@@ -151,7 +151,7 @@ class _AddVehicleState extends State<AddVehicle> {
                   child: Align(
                     alignment: AlignmentDirectional.topStart,
                     child: Text(
-                      'Número de Contacto',
+                      'Contacto',
                       style: GoogleFonts.plusJakartaSans(
                           color: black,
                           fontWeight: FontWeight.w500,
@@ -175,7 +175,7 @@ class _AddVehicleState extends State<AddVehicle> {
                             borderSide: BorderSide(color: borderColor)),
                         border: OutlineInputBorder(
                             borderSide: BorderSide(color: borderColor)),
-                        hintText: "Número de Contacto",
+                        hintText: "Contacto",
                         hintStyle: GoogleFonts.plusJakartaSans(
                             color: black, fontSize: 12)),
                   ),
@@ -189,7 +189,7 @@ class _AddVehicleState extends State<AddVehicle> {
                   child: Align(
                     alignment: AlignmentDirectional.topStart,
                     child: Text(
-                      'Endereço',
+                      'Empresa',
                       style: GoogleFonts.plusJakartaSans(
                           color: black,
                           fontWeight: FontWeight.w500,
@@ -213,7 +213,7 @@ class _AddVehicleState extends State<AddVehicle> {
                             borderSide: BorderSide(color: borderColor)),
                         border: OutlineInputBorder(
                             borderSide: BorderSide(color: borderColor)),
-                        hintText: "Endereço",
+                        hintText: "Empresa",
                         hintStyle: GoogleFonts.plusJakartaSans(
                             color: black, fontSize: 12)),
                   ),

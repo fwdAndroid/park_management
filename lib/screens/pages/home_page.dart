@@ -15,11 +15,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   String dropdownvalue = 'Carro';
-  var items = [
-    'Carro',
-    'Ciclo do motor',
-    'Camião',
-  ];
+  var items = ['Carro', 'Moto', 'Camião', 'Maquina', 'Outro'];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
