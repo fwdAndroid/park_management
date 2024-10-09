@@ -20,7 +20,7 @@ class _VerifyPageState extends State<VerifyPage> {
           iconTheme: IconThemeData(color: black),
           centerTitle: true,
           title: Text(
-            "View Enter Cars",
+            "Ver Enter Cars",
             style: TextStyle(color: black),
           ),
         ),
@@ -41,7 +41,7 @@ class _VerifyPageState extends State<VerifyPage> {
                   if (snapshot.data!.docs.isEmpty) {
                     return Center(
                       child: Text(
-                        "No Car is Available in this park ",
+                        "Nenhum carro está disponível neste parque",
                         style: TextStyle(color: black),
                       ),
                     );
@@ -96,7 +96,7 @@ class _VerifyPageState extends State<VerifyPage> {
                                                     data['phoneNumber'],
                                               )));
                                 },
-                                child: const Text("Verify"),
+                                child: const Text("Verificar"),
                               ),
                             )),
                           ],

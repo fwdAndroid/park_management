@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:park_management/screens/auth/forgot_password.dart';
 import 'package:park_management/screens/auth/signup_screen.dart';
 import 'package:park_management/screens/main_dashboard.dart';
 import 'package:park_management/services/auth_methods.dart';
@@ -64,7 +65,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50),
                       borderSide: BorderSide(color: borderColor)),
-                  hintText: "Enter Email Address",
+                  hintText: "Digite o endereço de e-mail",
                   hintStyle: GoogleFonts.plusJakartaSans(
                       color: textColors, fontSize: 12)),
             ),
@@ -102,7 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50),
                       borderSide: BorderSide(color: borderColor)),
-                  hintText: "Enter Password",
+                  hintText: "Introduza a palavra-passe",
                   hintStyle: GoogleFonts.plusJakartaSans(
                       color: textColors, fontSize: 12)),
             ),
@@ -113,7 +114,13 @@ class _LoginScreenState extends State<LoginScreen> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 TextButton(
-                    onPressed: () {}, child: const Text("Forgot Password"))
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (builder) => ChangePassword()));
+                    },
+                    child: const Text("Esqueceu-se da palavra-passe"))
               ],
             ),
           ),
@@ -131,7 +138,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       if (_emailController.text.isEmpty ||
                           _passwordController.text.isEmpty) {
                         showMessageBar(
-                            "Email and Password is Required", context);
+                            "E-mail e senha são necessários", context);
                       } else {
                         setState(() {
                           isLoading = true;
@@ -161,17 +168,16 @@ class _LoginScreenState extends State<LoginScreen> {
             },
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text.rich(TextSpan(
-                  text: 'Don’t have an account? ',
-                  children: <InlineSpan>[
-                    TextSpan(
-                      text: 'Sign Up',
-                      style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                          color: mainColor),
-                    )
-                  ])),
+              child: Text.rich(
+                  TextSpan(text: 'Não tem uma conta? ', children: <InlineSpan>[
+                TextSpan(
+                  text: 'Registar-me',
+                  style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      color: mainColor),
+                )
+              ])),
             ),
           ),
         ],

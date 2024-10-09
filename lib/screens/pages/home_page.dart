@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:park_management/screens/add/add_vehicle.dart';
@@ -15,11 +14,11 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  String dropdownvalue = 'Car';
+  String dropdownvalue = 'Carro';
   var items = [
-    'Car',
-    'Motor Cycle',
-    'Truck',
+    'Carro',
+    'Ciclo do motor',
+    'Camião',
   ];
   @override
   Widget build(BuildContext context) {
@@ -34,7 +33,7 @@ class _HomePageState extends State<HomePage> {
                       MaterialPageRoute(builder: (builder) => LoginScreen()));
                 });
               },
-              child: Text("Logout"))
+              child: Text("Sair"))
         ],
       ),
       body: SafeArea(
@@ -53,11 +52,12 @@ class _HomePageState extends State<HomePage> {
                       return const Center(child: CircularProgressIndicator());
                     }
                     if (!snapshot.hasData || snapshot.data == null) {
-                      return const Center(child: Text('No data available'));
+                      return const Center(
+                          child: Text('Não existem dados disponíveis'));
                     }
                     var snap = snapshot.data;
                     return Text(
-                      "Hello, " + snap['fullName'],
+                      "Olá;, " + snap['fullName'],
                       style: GoogleFonts.poppins(
                           color: appColor,
                           fontSize: 16,
@@ -68,7 +68,7 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Text(
-                "Select Vehicle \nType",
+                "Selecionar Veículo \Tipo",
                 style: GoogleFonts.poppins(fontSize: 27, color: appColor),
               ),
             ),

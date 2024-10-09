@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:image_gallery_saver/image_gallery_saver.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:park_management/screens/main_dashboard.dart';
 import 'package:park_management/services/database_methods.dart';
@@ -47,7 +46,7 @@ class _AddVehicleState extends State<AddVehicle> {
               child: Align(
                 alignment: AlignmentDirectional.topStart,
                 child: Text(
-                  'Driver Photo',
+                  'Foto do motorista',
                   style: GoogleFonts.plusJakartaSans(
                       color: black, fontWeight: FontWeight.w500, fontSize: 14),
                 ),
@@ -78,7 +77,7 @@ class _AddVehicleState extends State<AddVehicle> {
                   child: Align(
                     alignment: AlignmentDirectional.topStart,
                     child: Text(
-                      'Driver Name',
+                      'Nome do driver',
                       style: GoogleFonts.plusJakartaSans(
                           color: black,
                           fontWeight: FontWeight.w500,
@@ -101,7 +100,7 @@ class _AddVehicleState extends State<AddVehicle> {
                             borderSide: BorderSide(color: borderColor)),
                         border: OutlineInputBorder(
                             borderSide: BorderSide(color: borderColor)),
-                        hintText: "Enter Full Name",
+                        hintText: "Insira o nome completo",
                         hintStyle: GoogleFonts.plusJakartaSans(
                             color: black, fontSize: 12)),
                   ),
@@ -138,7 +137,7 @@ class _AddVehicleState extends State<AddVehicle> {
                             borderSide: BorderSide(color: borderColor)),
                         border: OutlineInputBorder(
                             borderSide: BorderSide(color: borderColor)),
-                        hintText: "Car Number",
+                        hintText: "Número do carro",
                         hintStyle: GoogleFonts.plusJakartaSans(
                             color: black, fontSize: 12)),
                   ),
@@ -152,7 +151,7 @@ class _AddVehicleState extends State<AddVehicle> {
                   child: Align(
                     alignment: AlignmentDirectional.topStart,
                     child: Text(
-                      'Contact Number',
+                      'Número de Contacto',
                       style: GoogleFonts.plusJakartaSans(
                           color: black,
                           fontWeight: FontWeight.w500,
@@ -176,7 +175,7 @@ class _AddVehicleState extends State<AddVehicle> {
                             borderSide: BorderSide(color: borderColor)),
                         border: OutlineInputBorder(
                             borderSide: BorderSide(color: borderColor)),
-                        hintText: "Contact Number ",
+                        hintText: "Número de Contacto",
                         hintStyle: GoogleFonts.plusJakartaSans(
                             color: black, fontSize: 12)),
                   ),
@@ -190,7 +189,7 @@ class _AddVehicleState extends State<AddVehicle> {
                   child: Align(
                     alignment: AlignmentDirectional.topStart,
                     child: Text(
-                      'Address',
+                      'Endereço',
                       style: GoogleFonts.plusJakartaSans(
                           color: black,
                           fontWeight: FontWeight.w500,
@@ -214,7 +213,7 @@ class _AddVehicleState extends State<AddVehicle> {
                             borderSide: BorderSide(color: borderColor)),
                         border: OutlineInputBorder(
                             borderSide: BorderSide(color: borderColor)),
-                        hintText: "Address",
+                        hintText: "Endereço",
                         hintStyle: GoogleFonts.plusJakartaSans(
                             color: black, fontSize: 12)),
                   ),
@@ -230,18 +229,20 @@ class _AddVehicleState extends State<AddVehicle> {
                       ),
                     )
                   : SaveButton(
-                      title: "Add Car",
+                      title: "Adicionar carro",
                       onTap: () async {
                         if (driverImage == null) {
-                          showMessageBar("Driver Photo is required", context);
+                          showMessageBar(
+                              "Foto do driver é necessária", context);
                         } else if (_nameController.text.isEmpty) {
                           showMessageBar(
-                              "Name of the user is required", context);
+                              "O nome do usuário é obrigatório", context);
                         } else if (_carNumberController.text.isEmpty) {
-                          showMessageBar("Car Number is required ", context);
+                          showMessageBar(
+                              "Número do carro é obrigatório", context);
                         } else if (_contactController.text.isEmpty) {
                           showMessageBar(
-                              "Contact Number is required ", context);
+                              "O número de contacto é obrigatório", context);
                         } else {
                           setState(() {
                             isLoading = true;
@@ -260,7 +261,8 @@ class _AddVehicleState extends State<AddVehicle> {
                           setState(() {
                             isLoading = false;
                           });
-                          showMessageBar("Car Added Successfully", context);
+                          showMessageBar(
+                              "Carro adicionado com sucesso", context);
                           Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(

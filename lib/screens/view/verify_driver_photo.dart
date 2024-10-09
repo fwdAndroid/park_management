@@ -25,7 +25,7 @@ class _VerifyDriverPhotoState extends State<VerifyDriverPhoto> {
         iconTheme: IconThemeData(color: black),
         centerTitle: true,
         title: Text(
-          "Driver Photo",
+          "Foto do Motorista",
           style: TextStyle(color: black),
         ),
       ),
@@ -47,7 +47,7 @@ class _VerifyDriverPhotoState extends State<VerifyDriverPhoto> {
                   width: 200,
                   height: 88,
                   child: SaveButton(
-                      title: "Verify",
+                      title: "Verificar",
                       onTap: () {
                         _showConfirmationDialog(context);
                       })))
@@ -61,14 +61,14 @@ class _VerifyDriverPhotoState extends State<VerifyDriverPhoto> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: Text('Confirm Verification'),
-          content: Text('Are you sure you want to verify this car?'),
+          title: Text('Confirmar Verificação'),
+          content: Text('Tem certeza de que deseja verificar este carro?'),
           actions: [
             TextButton(
               onPressed: () {
                 Navigator.of(context).pop(); // Close the dialog
               },
-              child: Text('Cancel'),
+              child: Text('Cancelar'),
             ),
             TextButton(
               onPressed: () async {
@@ -77,11 +77,11 @@ class _VerifyDriverPhotoState extends State<VerifyDriverPhoto> {
                     .doc(widget.uuid)
                     .delete();
                 Navigator.of(context).pop(); // Close the dialog
-                showMessageBar("Car is Verified Successfully", context);
+                showMessageBar("O carro é verificado com sucesso", context);
                 Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (builder) => MainDashboard()));
               },
-              child: Text('Verify'),
+              child: Text('Verificar'),
             ),
           ],
         );

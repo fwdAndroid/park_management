@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:park_management/screens/view/verify_driver_photo.dart';
 import 'package:park_management/uitls/colors.dart';
-import 'package:park_management/widgets/save_button.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class CarVerfiy extends StatefulWidget {
@@ -36,7 +35,7 @@ class _CarVerfiyState extends State<CarVerfiy> {
         iconTheme: IconThemeData(color: black),
         centerTitle: true,
         title: Text(
-          "Parking Map",
+          "Mapa de Estacionamento",
           style: TextStyle(color: black),
         ),
       ),
@@ -46,7 +45,7 @@ class _CarVerfiyState extends State<CarVerfiy> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              "Driver Detail",
+              "Detalhe do driver",
               style: GoogleFonts.poppins(fontSize: 27, color: appColor),
             ),
           ),
@@ -62,13 +61,13 @@ class _CarVerfiyState extends State<CarVerfiy> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Driver Name",
+                  "Nome do driver",
                   style: GoogleFonts.poppins(
                       fontSize: 27, color: const Color(0xff27B482)),
                 ),
                 Text(widget.ownerName),
                 Text(
-                  "Address",
+                  "Endereço",
                   style: GoogleFonts.poppins(
                       fontSize: 18, color: const Color(0xffBABABA)),
                 ),
@@ -79,7 +78,7 @@ class _CarVerfiyState extends State<CarVerfiy> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Phone Number",
+                  "Número de telefone",
                   style: GoogleFonts.poppins(
                       fontSize: 18, color: const Color(0xffBABABA)),
                 ),
@@ -100,7 +99,7 @@ class _CarVerfiyState extends State<CarVerfiy> {
                                     uuid: widget.uuid,
                                   )));
                     },
-                    child: const Text("View Driver Photo To Verify"))),
+                    child: const Text("Ver foto do driver para verificar"))),
           ),
         ],
       ),

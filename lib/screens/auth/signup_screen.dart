@@ -62,7 +62,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50),
                       borderSide: BorderSide(color: borderColor)),
-                  hintText: "Enter Name",
+                  hintText: "Insira o nome",
                   hintStyle: GoogleFonts.plusJakartaSans(
                       color: textColors, fontSize: 12)),
             ),
@@ -87,7 +87,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50),
                       borderSide: BorderSide(color: borderColor)),
-                  hintText: "Enter Email Address",
+                  hintText: "Digite o endereço de e-mail",
                   hintStyle: GoogleFonts.plusJakartaSans(
                       color: textColors, fontSize: 12)),
             ),
@@ -125,7 +125,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50),
                       borderSide: BorderSide(color: borderColor)),
-                  hintText: "Enter Password",
+                  hintText: "Introduza a palavra-passe",
                   hintStyle: GoogleFonts.plusJakartaSans(
                       color: textColors, fontSize: 12)),
             ),
@@ -145,11 +145,12 @@ class _SignupScreenState extends State<SignupScreen> {
                     title: "Sign Up",
                     onTap: () async {
                       if (_nameController.text.isEmpty) {
-                        showMessageBar("Name of the user is required", context);
+                        showMessageBar(
+                            "O nome do usuário é obrigatório", context);
                       } else if (_emailController.text.isEmpty) {
-                        showMessageBar("Email is required", context);
+                        showMessageBar("O e-mail é obrigatório", context);
                       } else if (_passwordController.text.isEmpty) {
-                        showMessageBar("Password is required ", context);
+                        showMessageBar("A palavra-passe é necessária", context);
                       } else {
                         setState(() {
                           isLoading = true;
@@ -162,7 +163,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         setState(() {
                           isLoading = false;
                         });
-                        showMessageBar("Registration Complete", context);
+                        showMessageBar("Inscrições Concluídas", context);
                         Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(

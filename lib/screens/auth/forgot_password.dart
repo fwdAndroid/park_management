@@ -36,7 +36,7 @@ class _ChangePasswordState extends State<ChangePassword> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              "Please type your email below and we will give you a OTP code,",
+              "Por favor, digite seu e-mail abaixo e nós lhe daremos um código OTP,",
               style: GoogleFonts.nunitoSans(
                 fontSize: 14,
               ),
@@ -57,7 +57,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                       borderSide: BorderSide(color: borderColor)),
                   border: OutlineInputBorder(
                       borderSide: BorderSide(color: borderColor)),
-                  hintText: "Enter Full Name",
+                  hintText: "Digite o endereço de e-mail",
                   hintStyle:
                       GoogleFonts.plusJakartaSans(color: black, fontSize: 12)),
             ),
@@ -65,10 +65,10 @@ class _ChangePasswordState extends State<ChangePassword> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: SaveButton(
-                title: "Send",
+                title: "Enviar",
                 onTap: () async {
                   if (providerPassController.text.isEmpty) {
-                    showMessageBar("Email is Required", context);
+                    showMessageBar("O e-mail é obrigatório", context);
                   } else {
                     await FirebaseAuth.instance
                         .sendPasswordResetEmail(
@@ -81,7 +81,8 @@ class _ChangePasswordState extends State<ChangePassword> {
                                       builder: (builder) =>
                                           const LoginScreen()))
                             });
-                    showMessageBar("Email verification link is sent", context);
+                    showMessageBar(
+                        "O link de verificação de e-mail é enviado", context);
                   }
                 }),
           ),
